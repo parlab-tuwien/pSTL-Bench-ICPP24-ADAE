@@ -10,9 +10,25 @@ The repository is structured as follows:
 
 - `cc-server/`: Collection of scripts that you should find when `ssh` into the Chamaleon Cloud server. The scripts are numbered and grouped by experiment. There are four types of scripts:
   - `00_run_all.sh`: Script to run all the experiments. Execute this, wait for it to finish and then download the results.
-  - `01_compile.sh`: Script to compile the pSTL-Bench suite with all the different compilers and backends supported in the Chamaleon Cloud image.
-  - `*_experiments.sh`: Scripts to execute the experiments for a specific figure in the paper. After running each of these scripts, you can find a folder `results/figX` with the results of the experiments in `json` format.
+  - `01_compile.sh`: Script to compile the pSTL-Bench suite with all the different compilers and backends supported in the Chamaleon Cloud image. The CC image already has the binaries compiled and ready to execute. If you want to compile from scratch, first remove the binaries with `rm -rf pSTL-Bench/build-*`.
+  - `*_experiments.sh`: Scripts to execute the experiments for a specific figure in the paper. After running each of these scripts, you can find a folder `results/figX/` with the results of the experiments in `json` format.
   - `*_plot.sj`: Scripts to generate the plots for a specific figure in the paper. These scripts should be executed after running the corresponding `*_experiments.sh` script. The plots will be saved as `figures/figX`.
+
+## Estimated time of completion (ETC)
+
+| Script                     | ETC    |
+|----------------------------|--------|
+| `00_run_all.sh`            |        |
+| `01_compile.sh`            | 5m     |
+| `02a_Fig2_experiments.sh`  | 1h 30m |
+| `03a_Fig3_experiments.sh`  | 4h     |
+| `04a_Fig5a_experiments.sh` | 10m    |
+| `04c_Fig5b_experiments.sh` | 10m    |
+| `05a_Fig7a_experiments.sh` | 1h     |
+| `05c_Fig7b_experiments.sh` | 1h     |
+| `*_plot.sh`                | 2s     |
+
+**Note**: If binaries already exist, step `01_compile.sh` should take only a few seconds.
 
 ## Remarks
 
