@@ -18,13 +18,13 @@ The repository is structured as follows:
 
 | Script                     | ETC    |
 |----------------------------|--------|
-| `00_run_all.sh`            |        |
+| `00_run_all.sh`            | 6h     |
 | `01_compile.sh`            | 5m     |
-| `02a_Fig2_experiments.sh`  | 1h 30m |
-| `03a_Fig3_experiments.sh`  | 4h     |
+| `02a_Fig2_experiments.sh`  | 1h     |
+| `03a_Fig3_experiments.sh`  | 3h     |
 | `04a_Fig5a_experiments.sh` | 10m    |
 | `04c_Fig5b_experiments.sh` | 10m    |
-| `05a_Fig7a_experiments.sh` | 1h     |
+| `05a_Fig7a_experiments.sh` | 30m    |
 | `05c_Fig7b_experiments.sh` | 1h     |
 | `*_plot.sh`                | 2s     |
 
